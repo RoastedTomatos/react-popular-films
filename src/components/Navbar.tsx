@@ -12,6 +12,7 @@ export const Navbar = () => {
       <Title>Popular Now</Title>
       <NavFooter>
         <SearchBar type='text' placeholder='Search films...' />
+        {/* Place for other links */}
         <FavoritesLink>Favorites</FavoritesLink>
       </NavFooter>
     </NavContainer>
