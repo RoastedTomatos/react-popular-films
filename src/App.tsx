@@ -1,11 +1,12 @@
 import { Navbar } from "./components/Navbar";
+import { Footer } from "./components/Footer";
+import { Wrapper } from "./styles/StyledLayout";
 
-function App() {
+export const App = () => {
   return (
-    <div>
+    <Wrapper>  
       <Navbar />
-    </div>
+      <Footer />
+    </Wrapper>
   );
 }
-
-export default App;
