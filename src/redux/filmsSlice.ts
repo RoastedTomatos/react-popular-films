@@ -16,11 +16,20 @@ const filmsSlice = createSlice({
     setPopularFilms(state, action: PayloadAction<Film[]>) {
       state.popularFilms = action.payload
     },
-    fetchPopularFilms() {
-
-    }
+    fetchPopularFilms() {},
+    fetchPopularFilmsSuccess(state, action: PayloadAction<Film[]>) {
+      state.popularFilms = action.payload
+    },
+    fetchPopularFilmsFailure(state, action: PayloadAction<string>) {
+      console.error('API Error:', action.payload)
+    },
   },
 })
 
-export const { setPopularFilms, fetchPopularFilms } = filmsSlice.actions
+export const {
+  setPopularFilms,
+  fetchPopularFilms,
+  fetchPopularFilmsFailure,
+  fetchPopularFilmsSuccess,
+} = filmsSlice.actions
 export default filmsSlice.reducer

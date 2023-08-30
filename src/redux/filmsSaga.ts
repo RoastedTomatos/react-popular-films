@@ -1,19 +1,18 @@
-import { put, takeLatest } from 'redux-saga/effects'
-import { setPopularFilms } from './filmsSlice'
+import { put, call, takeLatest } from 'redux-saga/effects'
+import { setPopularFilms, fetchPopularFilmsFailure } from './filmsSlice'
+import { fetchPopularFilms } from '../api/movieDBAPI'
+import { Film } from '../types/types'
 
-function* fetchPopularFilms() {
+function* fetchPopularFilmsSaga() {
   try {
-    const mockPopularFilms = [
-      {id: 1, title: 'Film 1'},
-      {id: 2, title: 'Film 2'},
-      {id: 3, title: 'Film 3'}
-    ]
-    yield put(setPopularFilms(mockPopularFilms))
-  } catch (error) {
+    const response: { results: Film[] } = yield call(fetchPopularFilms)
 
+    yield put(setPopularFilms(response.results))
+  } catch (error: any) {
+    yield put(fetchPopularFilmsFailure(error.message))
   }
 }
 
 export function* watchFilmsSaga() {
-  yield takeLatest('films/fetchPopularFilms', fetchPopularFilms)
+  yield takeLatest('films/fetchPopularFilms', fetchPopularFilmsSaga)
 }
