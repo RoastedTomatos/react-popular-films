@@ -1,20 +1,19 @@
-import React from 'react';
+import React from 'react'
+import { Film } from '../types/types'
+import { PosterImage, StyledCard, Title } from '../styles/StyledFilmsCard'
 
-interface FilmCardProps {
-  title: string;
-  poster_path: string;
-  key: number; // 'key' is a reserved prop name and should not be used as a prop name
-}
-
-export const FilmCard: React.FC<FilmCardProps> = ({
+export const FilmCard: React.FC<Film> = ({
   title,
   poster_path,
-  key
+  id,
 }) => {
   return (
-    <div>
-      <h1>{title}</h1>
-      <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt={title} />
-    </div>
-  );
+    <StyledCard>
+      <PosterImage
+        src={`https://image.tmdb.org/t/p/original${poster_path}`}
+        alt={title}
+      />
+      <Title>{title}</Title>
+    </StyledCard>
+  )
 }

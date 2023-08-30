@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../redux/store';
 import { fetchPopularFilms } from '../redux/filmsSlice';
 import { FilmCard } from './FilmCard';
+import { FilmsContainer } from '../styles/StyledFilmsHolder';
 
 export const FilmsHolder: React.FC = () => {
   const dispatch = useDispatch();
@@ -18,17 +19,14 @@ export const FilmsHolder: React.FC = () => {
   console.log('Component rendered!');
 
   return (
-    <div>
-      <h2>Popular Films</h2>
-      <ul>
+    <FilmsContainer>
         {popularFilms.map((film) => (
           <FilmCard
             title={film.title}
             poster_path={film.poster_path}
-            key={film.id}
+            id={film.id}
           />
         ))}
-      </ul>
-    </div>
+    </FilmsContainer>
   );
 }

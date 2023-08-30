@@ -4,8 +4,7 @@ export const FooterContainer = styled.footer`
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 1rem;
-  position: absolute;
+  padding: 1rem 0;
   bottom: 0;
   width: 100%;
 `
