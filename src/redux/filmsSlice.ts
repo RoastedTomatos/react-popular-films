@@ -16,8 +16,11 @@ const filmsSlice = createSlice({
     setPopularFilms(state, action: PayloadAction<Film[]>) {
       state.popularFilms = action.payload
     },
+    fetchPopularFilms() {
+
+    }
   },
 })
 
-export const { setPopularFilms } = filmsSlice.actions
+export const { setPopularFilms, fetchPopularFilms } = filmsSlice.actions
 export default filmsSlice.reducer
