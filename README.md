@@ -22,9 +22,9 @@ MovieDB Filmoteca is a web application that allows users to browse movies, add t
 
 ## Installation and Running
 
-1. Clone the repository: `git clone https://github.com/your-user/your-repository.git`
+1. Clone the repository: `git clone https://github.com/RoastedTomatos/react-popular-films/`
 
-2. Navigate to the project directory: `cd your-repository`
+2. Navigate to the project directory: `cd react-popular-films`
 
 3. Install dependencies: `npm install`
 
