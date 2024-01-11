@@ -1,11 +1,13 @@
 import React from 'react'
 import { Film } from '../types/types'
-import { PosterImage, StyledCard, Title } from '../styles/StyledFilmsCard'
+import { PosterImage, StyledCard, Title, Details } from '../styles/StyledFilmsCard'
+import { IconHeartEmpty } from '../assets/svg'
 
 export const FilmCard: React.FC<Film> = ({
   title,
   poster_path,
   id,
+  release_date
 }) => {
   return (
     <StyledCard>
@@ -14,6 +16,10 @@ export const FilmCard: React.FC<Film> = ({
         alt={title}
       />
       <Title>{title}</Title>
+      <div>
+        <Details>{release_date.slice(0, 4)}{}</Details>
+        <IconHeartEmpty />
+      </div>
     </StyledCard>
   )
 }

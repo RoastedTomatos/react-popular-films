@@ -25,6 +25,7 @@ export const FilmsHolder: React.FC = () => {
             title={film.title}
             poster_path={film.poster_path}
             id={film.id}
+            release_date={film.release_date}
           />
         ))}
     </FilmsContainer>

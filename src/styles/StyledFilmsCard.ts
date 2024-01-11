@@ -7,9 +7,10 @@ export const StyledCard = styled.div`
   padding: 16px;
   text-align: center;
   width: 280px;
+  transition: 0.3s ease-in-out;
 
   &:hover {
-    transition: 0.3s;
+    transform: scale(1.02);
     background-color: #D2D0DC;
   }
 `
@@ -24,4 +25,9 @@ export const PosterImage = styled.img`
   height: auto;
   display: flex;
   margin-top: 8px;
+`
+
+export const Details = styled.p`
+  width: 100%;
+  margin: 0;
 `
