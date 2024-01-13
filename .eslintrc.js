@@ -19,7 +19,12 @@ module.exports = {
   ],
   plugins: ["react", "react-hooks", "@typescript-eslint"],
   rules: {
-    // Define your custom ESLint rules here, if needed.
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   },
   settings: {
     react: {
