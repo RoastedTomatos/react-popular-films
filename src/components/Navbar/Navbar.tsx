@@ -4,7 +4,7 @@ import {
   Title,
   SearchBar,
   FavoritesLink,
-} from '../styles/StyledNavbar'
+} from './styles/StyledNavbar'
 
 export const Navbar = () => {
   return (
