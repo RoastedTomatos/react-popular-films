@@ -2,18 +2,18 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2021,
-    sourceType: 'module', 
+    sourceType: 'module',
     ecmaFeatures: {
-      jsx: true 
-    }
+      jsx: true,
+    },
   },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:react/jsx-runtime/extends',
-    'plugin:react-hooks/recommended', 
-    'plugin:redux-saga/recommended', 
-    'plugin:jsx-a11y/recommended', 
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:redux-saga/recommended',
+    'plugin:jsx-a11y/recommended',
     'plugin:prettier/recommended',
   ],
   plugins: [
@@ -22,14 +22,19 @@ module.exports = {
     'react-hooks',
     'redux-saga',
     'jsx-a11y',
-    'prettier'
+    'prettier',
   ],
   rules: {
-
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
   settings: {
     react: {
-      version: 'detect'
-    }
-  }
+      version: 'detect',
+    },
+  },
 };

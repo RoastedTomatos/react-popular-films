@@ -1,6 +1,8 @@
-export const router = () => {[
-  {
-    path: '/',
-    element: ''
-  }
-]}
+export const router = () => {
+  [
+    {
+      path: '/',
+      element: '',
+    },
+  ];
+};
