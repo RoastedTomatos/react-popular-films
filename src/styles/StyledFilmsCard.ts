@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from 'styled-components';
 
 export const StyledCard = styled.div`
   background-color: #fff;
@@ -11,23 +11,23 @@ export const StyledCard = styled.div`
 
   &:hover {
     transform: scale(1.02);
-    background-color: #D2D0DC;
+    background-color: #d2d0dc;
   }
-`
+`;
 
 export const Title = styled.h1`
   font-size: 1.2rem;
   margin: 8px 0;
-`
+`;
 
 export const PosterImage = styled.img`
   max-width: 100%;
   height: auto;
   display: flex;
   margin-top: 8px;
-`
+`;
 
 export const Details = styled.p`
   width: 100%;
   margin: 0;
-`
+`;

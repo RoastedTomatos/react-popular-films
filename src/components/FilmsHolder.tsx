@@ -20,14 +20,14 @@ export const FilmsHolder: React.FC = () => {
 
   return (
     <FilmsContainer>
-        {popularFilms.map((film) => (
-          <FilmCard
-            title={film.title}
-            poster_path={film.poster_path}
-            id={film.id}
-            release_date={film.release_date}
-          />
-        ))}
+      {popularFilms.map((film) => (
+        <FilmCard
+          title={film.title}
+          poster_path={film.poster_path}
+          id={film.id}
+          release_date={film.release_date}
+        />
+      ))}
     </FilmsContainer>
   );
-}
+};

@@ -1,34 +1,40 @@
 module.exports = {
-  parser: "@typescript-eslint/parser",
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2021,
-    sourceType: "module",
+    sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
     },
   },
-  env: {
-    browser: true,
-    es2021: true,
-  },
   extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
+    'eslint:recommended',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:redux-saga/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:prettier/recommended',
   ],
-  plugins: ["react", "react-hooks", "@typescript-eslint"],
+  plugins: [
+    '@typescript-eslint',
+    'react',
+    'react-hooks',
+    'redux-saga',
+    'jsx-a11y',
+    'prettier',
+  ],
   rules: {
-    "prettier/prettier": [
-      "error",
+    'prettier/prettier': [
+      'error',
       {
-        "endOfLine": "auto"
-      }
-    ]
+        endOfLine: 'auto',
+      },
+    ],
   },
   settings: {
     react: {
-      version: "detect",
+      version: 'detect',
     },
   },
 };

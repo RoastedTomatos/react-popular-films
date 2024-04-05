@@ -1,5 +1,3 @@
 export const SearchBar = () => {
-  return (
-    <>Search Bar</>
-  )
-}
+  return <>Search Bar</>;
+};
