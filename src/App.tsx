@@ -8,7 +8,7 @@ import { store } from './redux/store';
 
 export const App = () => {
   return (
-    <Provider store={store}>  
+    <Provider store={store}>
       <Wrapper>
         <Navbar />
         <FilmsHolder />
