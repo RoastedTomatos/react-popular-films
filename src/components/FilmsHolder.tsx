@@ -22,6 +22,7 @@ export const FilmsHolder: React.FC = () => {
     <FilmsContainer>
       {popularFilms.map((film) => (
         <FilmCard
+          key={film.id}
           title={film.title}
           poster_path={film.poster_path}
           id={film.id}

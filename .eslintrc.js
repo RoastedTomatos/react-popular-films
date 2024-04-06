@@ -11,6 +11,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
+    'plugin:react',
     'plugin:react-hooks/recommended',
     'plugin:redux-saga/recommended',
     'plugin:jsx-a11y/recommended',
@@ -36,5 +37,10 @@ module.exports = {
     react: {
       version: 'detect',
     },
+  },
+  env: {
+    browser: true,
+    node: true,
+    es2021: true,
   },
 };

@@ -5,7 +5,11 @@ import filmsReducer from './filmsSlice';
 import { watchFilmsSaga } from './filmsSaga';
 
 function* rootSaga() {
-  yield all([watchFilmsSaga()]);
+  try {
+    yield all([watchFilmsSaga()]);
+  } catch (error) {
+    console.log('Error in rootSaga:', error);
+  }
 }
 
 const sagaMiddleware = createSagaMiddleware();

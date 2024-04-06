@@ -8,8 +8,12 @@ function* fetchPopularFilmsSaga() {
     const response: { results: Film[] } = yield call(fetchPopularFilms);
 
     yield put(setPopularFilms(response.results));
-  } catch (error: any) {
-    yield put(fetchPopularFilmsFailure(error.message));
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      yield put(fetchPopularFilmsFailure(error.message));
+    } else {
+      yield put(fetchPopularFilmsFailure('An unknown error occurred'));
+    }
   }
 }
 
